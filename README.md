@@ -1,6 +1,6 @@
-# Huobi Python SDK v2
+# New Huo Python SDK v2
 
-This is Huobi Python SDK v2, you can import to your python project and use this SDK to query all market data, trading and manage your account. The SDK supports RESTful API invoking, and concurrently subscribing the market, account and order update from the Websocket connection.
+This is New Huo Python SDK v2, you can import to your python project and use this SDK to query all market data, trading and manage your account. The SDK supports RESTful API invoking, and concurrently subscribing the market, account and order update from the Websocket connection.
 
 If you already use SDK v1, it is strongly suggested migrate to v2 as we refactor the implementation to make it simpler and easy to maintain. We will stop the maintenance of v1 in the near future. Please refer to the instruction on how to migrate v1 to v2 in section [Migrate from v1](#Migrate-from-v1)
 
@@ -9,17 +9,17 @@ If you already use SDK v1, it is strongly suggested migrate to v2 as we refactor
 
 - [Quick Start](#Quick-Start)
 - [Usage](#Usage)
-    - [Folder structure](#Folder-structure)
-    - [Run Examples](#Run-examples)
-    - [Client](#client)
-    - [Migrate from v1](#Migrate-from-v1)
+  - [Folder structure](#Folder-structure)
+  - [Run Examples](#Run-examples)
+  - [Client](#client)
+  - [Migrate from v1](#Migrate-from-v1)
 - [Request example](#Request-example)
-    - [Reference data](#Reference-data)
-    - [Market data](#Market-data)
-    - [Account](#account)
-    - [Wallet](#wallet)
-    - [Trading](#trading)
-    - [Margin Loan](#margin-loan)
+  - [Reference data](#Reference-data)
+  - [Market data](#Market-data)
+  - [Account](#account)
+  - [Wallet](#wallet)
+  - [Trading](#trading)
+  - [Margin Loan](#margin-loan)
 - [Subscription example](#Subscription-example)
   - [Subscribe trade update](#Subscribe-trade-update)
   - [Subscribe candlestick update](#subscribe-candlestick-update)
@@ -56,7 +56,7 @@ After above section, this SDK should be already download to your local machine, 
 
 This is the folder and package structure of SDK source code and the description
 
-- **huobi**: The core of the SDK
+- **New Huo**: The core of the SDK
   - **client**: The client that are responsible to access data, this is the external interface layer.
   - **connection**: Responsible to manage the remote server connection
   - **constant**: The constant configuration
@@ -72,8 +72,8 @@ This is the folder and package structure of SDK source code and the description
 
 This SDK provides examples that under **/example** folder, if you want to run the examples to access private data, you need below additional steps:
 
-1. Create an **API Key** first from Huobi official website
-2. Create **privateconfig.py** into your **huobi** folder. The purpose of this file is to prevent submitting SecretKey into repository by accident, so this file is already added in the *.gitignore* file. 
+1. Create an **API Key** first from New Huo official website
+2. Create **privateconfig.py** into your **huobi** folder. The purpose of this file is to prevent submitting SecretKey into repository by accident, so this file is already added in the *.gitignore* file.
 3. Assign your API access key and secret key to as below:
 ```python
 p_api_key = "hrf5gdfghe-e74bebd8-2f4a33bc-e7963"
@@ -86,7 +86,7 @@ Regarding the difference between public data and private data you can find detai
 
 ### Client
 
-In this SDK, the client is the struct to access the Huobi API. In order to isolate the private data with public data, and isolated different kind of data, the client category is designated to match the API category. 
+In this SDK, the client is the struct to access the New Huo API. In order to isolate the private data with public data, and isolated different kind of data, the client category is designated to match the API category.
 
 All the client is listed in below table. Each client is very small and simple, it is only responsible to operate its related data, you can pick up multiple clients to create your own application based on your business.
 
